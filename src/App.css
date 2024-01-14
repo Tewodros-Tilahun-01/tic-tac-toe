@@ -19,7 +19,7 @@
   align-items: center;
   background: rgb(69, 191, 228);
   box-shadow: 9px 7px 7px rgb(0, 0, 0);
-  border: white solid 1px;
+  border: rgb(245, 239, 239) solid 1px;
 }
 .status {
   font-family: Arial, Helvetica, sans-serif;
