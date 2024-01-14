@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+
 import Square from "./square";
 function calculateWinner(square) {
   const lines = [
@@ -20,10 +20,7 @@ function calculateWinner(square) {
   }
   return null;
 }
-export default function Board() {
-  const [move, setMove] = useState(0);
-  const [xIsNext, setXIsNext] = useState(true);
-  const [square, setSquare] = useState(Array(9).fill(null));
+export default function Board({ xIsNext, square, onPlay }) {
   const winner = calculateWinner(square);
   let status;
 
@@ -31,23 +28,29 @@ export default function Board() {
     status = winner + " wins";
   } else {
     status = (xIsNext ? "x" : "o") + " turn";
+    // checking if the game is over
+    let gameOver = 1;
+    for (let i = 0; i < 9; i++) {
+      if (!square[i]) {
+        gameOver *= 0;
+      }
+    }
+    if (gameOver) {
+      status = "draw";
+    }
   }
-  if (move === 9 && !winner) {
-    status = "draw";
-  }
+
   function handClicked(num) {
     if (square[num] || calculateWinner(square)) {
       return;
     }
-    setMove((prv) => ++prv);
     const newSquare = square.slice();
     if (xIsNext) {
       newSquare[num] = "X";
     } else {
       newSquare[num] = "O";
     }
-    setSquare(newSquare);
-    setXIsNext(!xIsNext);
+    onPlay(newSquare);
   }
   return (
     <>
