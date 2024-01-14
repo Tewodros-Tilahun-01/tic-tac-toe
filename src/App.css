@@ -1,0 +1,29 @@
+.App {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #aa8686;
+}
+
+.Square-row {
+  display: flex;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  font-size: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(69, 191, 228);
+  box-shadow: 9px 7px 7px rgb(0, 0, 0);
+  border: white solid 1px;
+}
+.status {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 28px;
+  padding: 10px;
+  color: rgb(20, 18, 16);
+}
