@@ -35,7 +35,7 @@ const Game = () => {
   });
 
   return (
-    <div className="game-board">
+    <div className="game-board-full">
       <Board square={currentSquares} xIsNext={xIsNext} onPlay={handlePlay} />
       <div className="moves-contanier">
         <ol>{moves}</ol>

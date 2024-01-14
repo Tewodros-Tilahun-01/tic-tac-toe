@@ -27,10 +27,24 @@
   padding: 10px;
   color: rgb(20, 18, 16);
 }
-.game-board {
+.game-board-full {
   display: flex;
 }
 .moves-contanier {
   margin-top: 60px;
   margin-left: 30px;
+}
+@media screen and (max-width: 480px) {
+  .App {
+    width: auto;
+    height: 97vh;
+    padding: 20px;
+  }
+
+  .game-board-full {
+    display: block;
+  }
+  .contenier {
+    height: 80vh;
+  }
 }

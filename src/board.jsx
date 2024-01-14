@@ -53,7 +53,7 @@ export default function Board({ xIsNext, square, onPlay }) {
     onPlay(newSquare);
   }
   return (
-    <div>
+    <div className="game-board">
       <div className="status">{status}</div>
       <div className="Square-row">
         <Square value={square[0]} onClick={() => handClicked(0)} />
