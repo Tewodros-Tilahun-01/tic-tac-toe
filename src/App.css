@@ -1,50 +1,67 @@
-.App {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #aa8686;
+* {
+    box-sizing: border-box;
+    overflow: hidden;
 }
-
+.App {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #252525;
+}
+.box-border {
+    border-radius: 10px;
+    width: 85%;
+    height: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.playing-board {
+    padding: 10px;
+    background-color: rgb(192, 245, 232);
+    border-radius: 20px;
+}
 .Square-row {
-  display: flex;
+    display: flex;
 }
 
 .square {
-  width: 100px;
-  height: 100px;
-  font-size: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgb(69, 191, 228);
-  box-shadow: 9px 7px 7px rgb(0, 0, 0);
-  border: rgb(245, 239, 239) solid 1px;
+    width: 100px;
+    margin: 3px;
+    height: 100px;
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(253, 255, 255);
+    box-shadow: 1px 2px 2px rgb(148, 147, 147);
+    border: rgb(245, 239, 239) solid 1px;
 }
 .status {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 28px;
-  padding: 10px;
-  color: rgb(20, 18, 16);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    padding: 10px;
+    color: rgb(7, 7, 145);
 }
 .game-board-full {
-  display: flex;
+    display: flex;
 }
 .moves-contanier {
-  margin-top: 60px;
-  margin-left: 30px;
+    margin-top: 60px;
+    margin-left: 30px;
 }
 @media screen and (max-width: 480px) {
-  .App {
-    width: auto;
-    height: 97vh;
-    padding: 20px;
-  }
+    .App {
+        width: auto;
+        height: 97vh;
+        padding: 20px;
+    }
 
-  .game-board-full {
-    display: block;
-  }
-  .contenier {
-    height: 80vh;
-  }
+    .game-board-full {
+        display: block;
+    }
+    .contenier {
+        height: 80vh;
+    }
 }
