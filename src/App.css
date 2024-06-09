@@ -54,7 +54,7 @@
 @media screen and (max-width: 480px) {
     .App {
         width: auto;
-        height: 97vh;
+        height: 100vh;
         padding: 20px;
     }
 
@@ -63,5 +63,8 @@
     }
     .contenier {
         height: 80vh;
+    }
+    .App .moves-contanier {
+        margin-top: 20px;
     }
 }
