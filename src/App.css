@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-    overflow: hidden;
 }
 .App {
     height: 100vh;
@@ -48,14 +47,35 @@
     display: flex;
 }
 .moves-contanier {
-    margin-top: 60px;
+    margin-top: 70px;
     margin-left: 30px;
+}
+.list button {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+.list {
+    padding: 4px;
+    background-color: rgb(48, 45, 45);
+    margin-bottom: 4px;
+    border: 1px solid rgb(19, 231, 247);
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgb(206, 202, 202);
+}
+ol {
+    list-style: none;
+    transition: 3s;
+}
+.moves-contanier {
+    overflow: visible;
 }
 @media screen and (max-width: 480px) {
     .App {
         width: auto;
         height: 100vh;
-        padding: 20px;
+        padding: 20px 20px 0 20px;
     }
 
     .game-board-full {
@@ -66,5 +86,8 @@
     }
     .App .moves-contanier {
         margin-top: 20px;
+    }
+    .list {
+        width: 50%;
     }
 }
