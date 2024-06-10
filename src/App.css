@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    overflow: hidden;
 }
 .App {
     height: 100vh;
@@ -82,10 +83,12 @@ ol {
         display: block;
     }
     .contenier {
-        height: 80vh;
+        height: 95vh;
+        overflow: visible;
     }
     .App .moves-contanier {
         margin-top: 20px;
+        overflow: visible;
     }
     .list {
         width: 50%;
