@@ -34,8 +34,6 @@ const Game = () => {
                 className="list"
                 style={{
                     opacity: 1,
-                    position: "relative",
-                    right: 20,
                 }}
             >
                 <button onClick={() => jumpTo(move)}>{description}</button>

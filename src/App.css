@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-    overflow: hidden;
 }
 .App {
     height: 100vh;
@@ -8,6 +7,7 @@
     justify-content: center;
     align-items: center;
     background: #252525;
+    overflow: hidden;
 }
 .box-border {
     border-radius: 10px;
@@ -46,6 +46,8 @@
 }
 .game-board-full {
     display: flex;
+    overflow: visible;
+    height: 100%;
 }
 .moves-contanier {
     margin-top: 70px;
@@ -64,14 +66,16 @@
     border: 1px solid rgb(19, 231, 247);
     border-radius: 5px;
     box-shadow: 1px 1px 5px rgb(206, 202, 202);
+    text-align: center;
 }
 ol {
     list-style: none;
     transition: 3s;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
-.moves-contanier {
-    overflow: visible;
-}
+
 @media screen and (max-width: 480px) {
     .App {
         width: auto;
@@ -80,17 +84,23 @@ ol {
     }
 
     .game-board-full {
-        display: block;
+        display: flex;
+        flex-direction: column;
     }
     .contenier {
-        height: 100vh;
+        height: 100%;
         overflow: visible;
     }
     .App .moves-contanier {
         margin-top: 20px;
-        overflow: visible;
+        flex: 1;
     }
     .list {
         width: 50%;
+    }
+    .moves-contanier ol {
+        position: relative;
+        right: 20px;
+        height: 200px;
     }
 }
