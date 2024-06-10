@@ -11,7 +11,6 @@ const Square = ({ value, onClick }) => {
                             : "solid #d636ba 3px",
                 }}
             >
-                {console.log(value)}
                 <strong
                     style={{ color: value === "X" ? "#14c38d" : "#d636ba" }}
                 >
